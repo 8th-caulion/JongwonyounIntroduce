@@ -35,7 +35,7 @@ a {
 
 .container {
     margin: 0 auto;
-    width: 750px;
+    width: 950px;
     margin-top: 80px;
 }
 
@@ -84,8 +84,8 @@ table {
     text-align: left;
     /* border-top: 1px solid #ccc; */
     /* border-bottom: 1px solid #ccc; */
-    width: 500px;
-    margin-left: 10px;
+    width: 550px;
+    margin-left: 40px;
 }
 
 table td:nth-child(1) {
@@ -102,5 +102,9 @@ table tr:nth-child(2n) {
 }
 
 table tr>td:nth-child(1) {
-    font-weight: 600;
+    font-weight: 500;
+}
+
+table tr>td:nth-child(2) {
+    font-weight: 300;
 }
