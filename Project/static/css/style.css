@@ -82,8 +82,8 @@ a {
 table {
     border-collapse: collapse;
     text-align: left;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
+    /* border-top: 1px solid #ccc; */
+    /* border-bottom: 1px solid #ccc; */
     width: 500px;
     margin-left: 10px;
 }
