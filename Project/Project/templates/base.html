@@ -6,11 +6,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>자기소개 사이트!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/nromal.css' %}" />
 </head>
 
 <body>
-    {% block body %}
+    <div class="header">
+        <div class="headerTitle">
+            <a href="{% url 'main' %}">JongwonYoun</a>
+        </div>
+        <div class="nav">
+            <div><a href="{% url 'main' %}">Home</a></div>
+            <div><a href="{% url 'profile' %}">Profile</a></div>
+        </div>
+    </div>
+    <div class="container">
+        <h1 class="head">
+            {% block head %}
+            {% endblock %}
+        </h1>
+        <div class="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.13.0/bodymovin.js"></script>
+    {% block script %}
     {% endblock %}
 </body>
 
