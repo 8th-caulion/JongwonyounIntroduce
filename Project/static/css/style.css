@@ -101,4 +101,6 @@ table tr:nth-child(2n) {
     background-color: rgba(239, 239, 239, 0.7);
 }
 
-table td {}
+table tr>td:nth-child(1) {
+    font-weight: 600;
+}
