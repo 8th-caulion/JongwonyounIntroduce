@@ -13,7 +13,13 @@
 
 <body>
     <div class="header">
-        JongwonYoun
+        <div class="headerTitle">
+            JongwonYoun
+        </div>
+        <div class="nav">
+            <div><a>Home</a></div>
+            <div><a>Profile</a></div>
+        </div>
     </div>
     <div class="container">
         <h1 class="head">
@@ -25,6 +31,9 @@
             {% endblock %}
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.13.0/bodymovin.js"></script>
+    {% block script %}
+    {% endblock %}
 </body>
 
 </html>

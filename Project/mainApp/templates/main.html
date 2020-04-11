@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block head %}
 저를 소개합니다!
@@ -7,4 +8,36 @@
 이 페이지는 저를 간단하게 소개하는 페이지에요!
 <br>
 상단 바에서 원하는 정보를 클릭해 보세요
+<br>
+<div class="animationContainer">
+    <div id="facebook"></div>
+    <div id="instagram"></div>
+    <div id="github"></div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script>
+    bodymovin.loadAnimation({
+        container: document.getElementById('facebook'), // Required
+        path: "{% static 'animation/2826-facebook.json' %}", // Required
+        renderer: 'svg', // Required
+        loop: false, // Optional
+        autoplay: true // Optional
+    });
+    bodymovin.loadAnimation({
+        container: document.getElementById('instagram'), // Required
+        path: "{% static 'animation/3118-instagram.json' %}", // Required
+        renderer: 'svg', // Required
+        loop: false, // Optional
+        autoplay: true // Optional
+    });
+    bodymovin.loadAnimation({
+        container: document.getElementById('github'), // Required
+        path: "{% static 'animation/github.json' %}", // Required
+        renderer: 'svg', // Required
+        loop: true, // Optional
+        autoplay: true // Optional
+    });
+</script>
 {% endblock %}
