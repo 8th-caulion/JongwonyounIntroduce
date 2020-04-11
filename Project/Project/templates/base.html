@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/nromal.css' %}" />
 </head>
 
 <body>
@@ -17,8 +18,8 @@
             JongwonYoun
         </div>
         <div class="nav">
-            <div><a>Home</a></div>
-            <div><a>Profile</a></div>
+            <div><a href="{% url 'main' %}">Home</a></div>
+            <div><a href="{% url 'profile' %}">Profile</a></div>
         </div>
     </div>
     <div class="container">

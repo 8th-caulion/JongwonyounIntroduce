@@ -6,7 +6,7 @@ body {
     display: flex;
     padding-left: 30px;
     padding-bottom: 15px;
-    border-bottom: 1px lightgray solid;
+    border-bottom: 1px solid lightgray;
 
 }
 
@@ -26,7 +26,11 @@ body {
 
 .nav>div {
     margin: 10px 30px;
+}
 
+a {
+    text-decoration: none;
+    color: black;
 }
 
 .container {
@@ -74,3 +78,27 @@ body {
     height: 35px;
     flex: none;
 }
+
+table {
+    border-collapse: collapse;
+    text-align: left;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    width: 500px;
+    margin-left: 10px;
+}
+
+table td:nth-child(1) {
+    padding-left: 15px;
+    width: 80px;
+}
+
+table tr {
+    height: 60px;
+}
+
+table tr:nth-child(2n) {
+    background-color: rgba(239, 239, 239, 0.7);
+}
+
+table td {}
