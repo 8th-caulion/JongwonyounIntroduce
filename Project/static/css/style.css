@@ -2,6 +2,16 @@ body {
     font-family: 'Noto Sans KR', sans-serif;
 }
 
+#test {
+    animation: fadein 2s;
+    -moz-animation: fadein 2s;
+    /* Firefox */
+    -webkit-animation: fadein 2s;
+    /* Safari and Chrome */
+    -o-animation: fadein 2s;
+    /* Opera */
+}
+
 .header {
     display: flex;
     padding-left: 30px;
@@ -31,7 +41,7 @@ body {
 }
 
 .nav>div {
-    margin: 20px 40px;
+    margin: 20px 30px;
 }
 
 
@@ -49,12 +59,26 @@ a {
 .head {
     font-size: 45px;
     font-weight: 700;
+    animation: fadein 1.5s;
+    -moz-animation: fadein 1.5s;
+    /* Firefox */
+    -webkit-animation: fadein 1.5s;
+    /* Safari and Chrome */
+    -o-animation: fadein 1.5s;
+    /* Opera */
 }
 
 .content {
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 300;
     padding: 0px 20px;
+    animation: 2s 10s fadein2;
+    -moz-animation: fadein2 2s;
+    /* Firefox */
+    -webkit-animation: 2s fadein2;
+    /* Safari and Chrome */
+    -o-animation: fadein2 2s;
+    /* Opera */
 }
 
 .animationContainer {
@@ -92,7 +116,7 @@ table {
     /* border-top: 1px solid #ccc; */
     /* border-bottom: 1px solid #ccc; */
     width: 550px;
-    margin-left: 40px;
+    margin-left: 30px;
 }
 
 table td:nth-child(1) {
@@ -122,4 +146,109 @@ h2 {
     transform: translateX(-20px);
     padding-bottom: 15px;
     border-bottom: 1px solid #ccc;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadein {
+
+    /* Firefox */
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadein {
+
+    /* Safari and Chrome */
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadein {
+
+    /* Opera */
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadein2 {
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadein2 {
+
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadein2 {
+
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadein2 {
+
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
