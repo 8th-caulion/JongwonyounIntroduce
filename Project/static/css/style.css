@@ -5,15 +5,21 @@ body {
 .header {
     display: flex;
     padding-left: 30px;
-    padding-bottom: 15px;
     border-bottom: 1px solid lightgray;
-
+    position: fixed;
+    height: 70px;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: white;
+    z-index: 100;
 }
 
 .header>.headerTitle {
     font-size: 30px;
     font-weight: 900;
     flex: 1 0;
+    line-height: 60px;
 }
 
 .nav {
@@ -25,8 +31,9 @@ body {
 }
 
 .nav>div {
-    margin: 10px 30px;
+    margin: 20px 40px;
 }
+
 
 a {
     text-decoration: none;
@@ -36,7 +43,7 @@ a {
 .container {
     margin: 0 auto;
     width: 950px;
-    margin-top: 80px;
+    margin-top: 100px;
 }
 
 .head {
