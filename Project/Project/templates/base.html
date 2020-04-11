@@ -6,12 +6,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>자기소개 사이트!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
 </head>
 
 <body>
-    {% block body %}
-    {% endblock %}
+    <div class="header">
+        JongwonYoun
+    </div>
+    <div class="container">
+        <h1 class="head">
+            {% block head %}
+            {% endblock %}
+        </h1>
+        <div class="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
 </body>
 
 </html>
