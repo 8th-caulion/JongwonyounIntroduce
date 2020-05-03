@@ -2,48 +2,35 @@
 {% load static %}
 
 {% block head %}
-저를 소개합니다!
+<link rel="stylesheet" href="{% static 'css/home.css' %}" />
 {% endblock %}
 {% block content %}
-이 페이지는 저를 간단하게 소개하는 페이지에요!
-<br>
-상단 바에서 원하는 정보를 클릭해 보세요
-<br>
-<div class="animationContainer">
-    <a href="https://www.facebook.com/profile.php?id=100005653635490&ref=bookmarks">
-        <div id="facebook"></div>
+<div class="cardContainer">
+    {% for post in posts.all %}
+    <a href="{% url 'detail' post.id %}">
+        <div class="myCard">
+            <div class="myCardHeader">{{post.title}}</div>
+
+            <div class="myCardBody">
+                <div class="myCardText">{{post.summary}}</div>
+            </div>
+            <div class="myCardFootersContainer">
+                <div class="pub">{{post.pub_date}}</div>
+                <div class="myCardFooter">
+                    <span class="myCardAuthorPre">by </span>
+                    <div class="myCardAuthor">{{post.author}}</div>
+                    <img class="myCardIcon" src="{% static 'icon/views.svg' %}" alt="">
+                    <div class="myCardCounter">{{post.view_count}}</div>
+                    <img class="myCardIcon" src="{% static 'icon/comments.svg' %}" alt="">
+                    <div class="myCardCounter">{{post.comments.all.count}}</div>
+                </div>
+            </div>
+        </div>
     </a>
-    <a href="https://www.instagram.com/eatingcookieman/?hl=ko">
-        <div id="instagram"></div>
-    </a>
-    <a href="https://github.com/korECM">
-        <div id="github"></div>
-    </a>
+    {% endfor %}
 </div>
 {% endblock %}
 
 {% block script %}
-<script>
-    bodymovin.loadAnimation({
-        container: document.getElementById('facebook'), // Required
-        path: "{% static 'animation/2826-facebook.json' %}", // Required
-        renderer: 'svg', // Required
-        loop: false, // Optional
-        autoplay: true // Optional
-    });
-    bodymovin.loadAnimation({
-        container: document.getElementById('instagram'), // Required
-        path: "{% static 'animation/3118-instagram.json' %}", // Required
-        renderer: 'svg', // Required
-        loop: false, // Optional
-        autoplay: true // Optional
-    });
-    bodymovin.loadAnimation({
-        container: document.getElementById('github'), // Required
-        path: "{% static 'animation/github.json' %}", // Required
-        renderer: 'svg', // Required
-        loop: true, // Optional
-        autoplay: true // Optional
-    });
-</script>
+
 {% endblock %}

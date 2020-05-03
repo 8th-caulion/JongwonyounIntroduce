@@ -1,0 +1,84 @@
+.detailContainer {
+    width: auto;
+    margin: 0 auto;
+    background-color: white;
+    min-height: 500px;
+    margin-top: 30px;
+    box-shadow: rgba(23, 25, 29, 0.05) 0 6px 25px;
+    padding: 15px 15px;
+}
+
+.detailContainer {}
+
+.detailDelete,
+.detailEdit {
+    float: right;
+    margin: 10px 10px;
+    margin-top: 0;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.date {
+    font-weight: 100;
+    font-size: 0.8rem;
+    margin-left: 5px;
+    padding-top: 5px;
+}
+
+.detailBody {
+    margin-top: 3px;
+    font-size: 20px;
+}
+
+.detailContent {
+    min-height: 500px;
+}
+
+.detailComment {}
+
+.detailComment {
+    min-height: 50px;
+    /* margin: 10px 0; */
+    padding: 10px;
+    padding-bottom: 0;
+}
+
+.detailCommentHeader {
+    display: flex;
+}
+
+.commentAuthor {
+    flex: 1 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.commentPubDate {
+    font-weight: 100;
+    font-size: 0.9rem;
+    margin-left: 5px;
+}
+
+.commentContent {
+    margin-top: 15px;
+    font-size: 1.1rem;
+}
+
+.commentCount {
+    font-weight: 100;
+    font-size: 1.2rem;
+}
+
+.commentForm {
+    margin: 10px 10px;
+}
+
+.commentDeleteButton {
+    margin-right: 5px;
+    font-weight: 100;
+    font-size: 0.9rem;
+}

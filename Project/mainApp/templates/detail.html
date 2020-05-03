@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/detail.css' %}" />
+{% endblock %}
+{% block content %}
+<div class="detailContainer">
+    <div class="detailHeader">
+        <a href="{% url 'delete' detail.id %}">
+            <button type="button" class="btn btn-outline-danger detailDelete">삭제</button>
+        </a>
+        <a href="{% url 'edit' detail.id %}">
+            <button type="button" class="btn btn-outline-primary detailEdit">수정</button>
+        </a>
+        <div class="title">
+            {{detail.title}}
+        </div>
+        <div class="date">
+            작성일 : {{detail.pub_date}}
+        </div>
+        <div class="date">
+            수정일 : {{detail.modified_date}}
+        </div>
+        <div class="date">
+            조회수 : {{detail.view_count}}
+        </div>
+    </div>
+    <hr />
+    <div class="detailBody">
+        <div class="detailContent">
+            {{detail.text}}
+        </div>
+        <div class="detailCommentContainer">
+            <hr />
+            {% if detail.comments.all.count == 0 %}
+            <div class="commentCount">
+                작성된 댓글이 없습니다
+            </div>
+            {% else %}
+            <div class="commentCount">
+                {{detail.comments.all.count}}개의 댓글
+            </div>
+            {% endif %}
+            <form action="{% url 'writeNewComment' detail.id %}" class="commentForm">
+                <div class="form-group row col-sm-2">
+                    <input type="text" class="form-control" placeholder="작성자" name="author">
+                </div>
+                <div class=" from-group mb-3">
+                    <textarea class="form-control" name="text" id="exampleFormControlTextarea1" rows="3"
+                        placeholder="댓글을 작성하세요">{{post.text}}</textarea>
+                </div>
+                <button type="submit" class="btn btn-dark">작성</button>
+            </form>
+            {% for comment in detail.comments.all %}
+            <hr />
+            <div class="detailComment">
+                <div class="detailCommentHeader">
+                    <div class="commentAuthor">
+                        {{comment.author}}
+                    </div>
+                    <a class="commentDeleteButton" href="{% url 'deleteComment' comment.id %}">
+                        삭제 &nbsp |
+                    </a>
+                    <div class="commentPubDate">
+                        {{comment.pub_date}}
+                    </div>
+                </div>
+                <div class="commentContent">
+                    {{comment.text}}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

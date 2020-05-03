@@ -1,0 +1,118 @@
+.cardContainer {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    padding: 0 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 50px;
+    column-gap: 25px;
+    align-content: center;
+    justify-content: center;
+    height: 100%;
+}
+
+@media (max-width: 1500px) {
+    .cardContainer {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 1250px) {
+    .cardContainer {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 900px) {
+    .cardContainer {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.myCard {
+    width: 250px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 15px 0;
+    padding-bottom: 0;
+    box-shadow: rgba(23, 25, 29, 0.05) 0 6px 25px;
+    transform: translateY(0);
+    transition: box-shadow .3s, transform .3s;
+}
+
+.myCard:hover {
+    transform: translateY(-4px);
+    box-shadow: rgba(23, 25, 29, 0.15) 0 6px 35px;
+}
+
+.myCardHeader {
+    font-weight: 700;
+    font-size: 1.3rem;
+    flex: 1 0;
+    padding: 0 15px;
+}
+
+.myCardBody {
+    margin-top: 5px;
+    font-size: 0.9rem;
+    position: relative;
+    height: 100%;
+    flex: 1 0;
+    padding: 0 15px;
+}
+
+.myCardFootersContainer {
+    /* height: 50px; */
+    margin-top: auto;
+    /* margin-bottom: 10px; */
+}
+
+.myCardText {
+    height: 210px;
+}
+
+.pub {
+    font-weight: 200;
+    font-size: 0.6rem;
+    /* position: absolute; */
+    /* bottom: 25px; */
+    text-align: left;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 0 15px;
+}
+
+.myCardFooter {
+    display: flex;
+    border-top: 1px solid rgb(248, 249, 250);
+    padding: 5px 15px;
+    background-color: rgba(245, 245, 244, 0.6);
+    /* padding-bottom: 0; */
+
+}
+
+.myCardAuthorPre {
+    font-weight: 200;
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+.myCardAuthor {
+    font-weight: 500;
+    flex: 1 0;
+}
+
+.myCardIcon {
+    height: 15px;
+    width: 15px;
+    margin-left: auto;
+}
+
+.myCardCounter {
+    margin-left: 10px;
+    margin-right: 5px;
+    font-weight: 200;
+}

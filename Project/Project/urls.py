@@ -20,6 +20,14 @@ import profileApp.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', mainApp.views.main, name="main"),
-    path('profile/', profileApp.views.profile, name="profile")
+    path('', mainApp.views.mainPage, name="main"),
+    path('post/<int:blog_id>', mainApp.views.detail, name="detail"),
+    path('write/', mainApp.views.newPost, name="newPost"),
+    path('create/', mainApp.views.saveNewPost, name='writeNewPost'),
+    path('delete/<int:blog_id>', mainApp.views.deletePost, name="delete"),
+    path('edit/<int:blog_id>', mainApp.views.editPost, name="edit"),
+    path('profile/', profileApp.views.profile, name="profile"),
+    path('writeComment/<int:blog_id>',mainApp.views.writeNewComment, name="writeNewComment"),
+    path('deleteComment/<int:comment_id>', mainApp.views.deleteComment, name="deleteComment"),
+    path('editSave/<int:blog_id>', mainApp.views.saveEditedPost, name="saveEditedPost")
 ]
