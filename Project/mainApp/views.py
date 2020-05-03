@@ -12,6 +12,8 @@ def mainPage(request):
 
 def detail(request, blog_id):
     post = get_object_or_404(Post, pk = blog_id)
+    post.view_count = post.view_count + 1
+    post.save()
     return render(request, 'detail.html', {'detail' : post})
 
 def newPost(request):
