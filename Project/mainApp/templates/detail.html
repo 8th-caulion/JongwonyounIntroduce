@@ -7,7 +7,7 @@
 {% block content %}
 <div class="detailContainer">
     <div class="detailHeader">
-        <a>
+        <a href="{% url 'delete' detail.id %}">
             <button type="button" class="btn btn-outline-danger detailDelete">삭제</button>
         </a>
         <a>

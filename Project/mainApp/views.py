@@ -29,3 +29,7 @@ def saveNewPost(request):
     post.view_count = 0
     post.save()
     return redirect('/post/'+str(post.id))
+def deletePost(request, blog_id):
+    post = get_object_or_404(Post, pk = blog_id)
+    post.delete()
+    return redirect('main')
