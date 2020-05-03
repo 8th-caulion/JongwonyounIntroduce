@@ -26,7 +26,7 @@ def saveNewPost(request):
     post.text = request.GET['text']
     post.pub_date = timezone.datetime.now()
     post.modified_date = post.pub_date
-    post.view_count = 0
+    post.view_count = 1
     post.save()
     return redirect('/post/'+str(post.id))
 def deletePost(request, blog_id):
