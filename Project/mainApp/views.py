@@ -44,7 +44,7 @@ def saveEditedPost(request, blog_id):
     post.text = request.GET['text']
     post.modified_date = timezone.datetime.now()
     post.save()
-    return redirect('/post/'+ blog_id)
+    return redirect('/post/'+ str(blog_id))
 def writeNewComment(request, blog_id):
     comment = Comment()
     comment.author = request.GET['author']

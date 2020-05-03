@@ -36,6 +36,7 @@
 
 .detailContent {
     min-height: 500px;
+    line-height: 25px;
 }
 
 .detailComment {}

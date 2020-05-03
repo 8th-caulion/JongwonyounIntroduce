@@ -49,10 +49,11 @@
 }
 
 .myCardHeader {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 1.3rem;
-    flex: 1 0;
     padding: 0 15px;
+    margin-bottom: 10px;
+    line-height: 25px;
 }
 
 .myCardBody {
@@ -62,6 +63,8 @@
     height: 100%;
     flex: 1 0;
     padding: 0 15px;
+    letter-spacing: 1px;
+    line-height: 15px;
 }
 
 .myCardFootersContainer {
@@ -70,9 +73,7 @@
     /* margin-bottom: 10px; */
 }
 
-.myCardText {
-    height: 210px;
-}
+.myCardText {}
 
 .pub {
     font-weight: 200;
@@ -103,6 +104,9 @@
 .myCardAuthor {
     font-weight: 500;
     flex: 1 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .myCardIcon {

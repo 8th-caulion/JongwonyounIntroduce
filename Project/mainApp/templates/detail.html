@@ -29,7 +29,7 @@
     <hr />
     <div class="detailBody">
         <div class="detailContent">
-            {{detail.text}}
+            {{detail.text|linebreaksbr}}
         </div>
         <div class="detailCommentContainer">
             <hr />
@@ -60,7 +60,7 @@
                         {{comment.author}}
                     </div>
                     <a class="commentDeleteButton" href="{% url 'deleteComment' comment.id %}">
-                        삭제 &nbsp |
+                        삭제 |
                     </a>
                     <div class="commentPubDate">
                         {{comment.pub_date}}
