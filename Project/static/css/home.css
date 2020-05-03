@@ -1,0 +1,50 @@
+.cardContainer {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    padding: 0 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 50px;
+    column-gap: 50px;
+    align-content: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.myCard {
+    width: 250px;
+    height: 300px;
+    background-color: white;
+    padding: 15px 15px;
+    box-shadow: rgba(23, 25, 29, 0.05) 0 6px 25px;
+    transform: translateY(0);
+    transition: box-shadow .3s, transform .3s;
+}
+
+.myCard:hover {
+    transform: translateY(-4px);
+    box-shadow: rgba(23, 25, 29, 0.15) 0 6px 35px;
+}
+
+.myCardHeader {
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.myCardBody {
+    margin-top: 5px;
+    font-size: 0.9rem;
+    position: relative;
+    height: 100%;
+}
+
+.pub {
+    font-weight: 200;
+    font-size: 0.6rem;
+    position: absolute;
+    bottom: 25px;
+    text-align: right;
+    width: 100%;
+    margin-right: 10px;
+}
