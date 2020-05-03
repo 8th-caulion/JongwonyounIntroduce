@@ -21,5 +21,5 @@ import profileApp.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', mainApp.views.main, name="main"),
-    # path('profile/', profileApp.views.profile, name="profile")
+    path('profile/', profileApp.views.profile, name="profile")
 ]
