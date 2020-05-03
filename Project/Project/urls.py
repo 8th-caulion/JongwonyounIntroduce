@@ -22,5 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', mainApp.views.mainPage, name="main"),
     path('post/<int:blog_id>', mainApp.views.detail, name="detail"),
+    path('write/', mainApp.views.newPost, name="newPost"),
+    path('create/', mainApp.views.saveNewPost, name='writeNewPost'),
     path('profile/', profileApp.views.profile, name="profile")
 ]
