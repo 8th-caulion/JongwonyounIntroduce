@@ -7,7 +7,7 @@
 {% block content %}
 <div class="cardContainer">
     {% for post in posts.all %}
-    <a>
+    <a href="{% url 'detail' post.id %}">
         <div class="myCard">
             <div class="myCardHeader">{{post.title}}</div>
 

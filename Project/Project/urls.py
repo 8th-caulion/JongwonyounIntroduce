@@ -21,5 +21,6 @@ import profileApp.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', mainApp.views.mainPage, name="main"),
+    path('post/<int:blog_id>', mainApp.views.detail, name="detail"),
     path('profile/', profileApp.views.profile, name="profile")
 ]

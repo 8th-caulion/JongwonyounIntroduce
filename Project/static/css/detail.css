@@ -1,5 +1,5 @@
 .detailContainer {
-    width: 1500px;
+    width: auto;
     margin: 0 auto;
     background-color: white;
     min-height: 500px;
@@ -14,18 +14,55 @@
 .detailEdit {
     float: right;
     margin: 10px 10px;
+    margin-top: 0;
 }
 
 .title {
     font-weight: 600;
+    font-size: 30px;
 }
 
 .date {
     font-weight: 100;
     font-size: 0.8rem;
-    margin-left: 10px;
+    margin-left: 5px;
+    padding-top: 5px;
 }
 
 .detailBody {
     margin-top: 3px;
+    font-size: 20px;
+}
+
+.detailContent {
+    min-height: 500px;
+}
+
+.detailComment {}
+
+.detailComment {
+    min-height: 50px;
+    /* margin: 10px 0; */
+    padding: 10px;
+    padding-bottom: 0;
+}
+
+.detailCommentHeader {
+    display: flex;
+}
+
+.commentAuthor {
+    flex: 1 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.commentPubDate {
+    font-weight: 100;
+    font-size: 0.9rem;
+}
+
+.commentContent {
+    margin-top: 15px;
+    font-size: 1.1rem;
 }
