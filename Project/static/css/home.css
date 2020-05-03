@@ -51,7 +51,6 @@
 .myCardHeader {
     font-weight: 700;
     font-size: 1.3rem;
-    flex: 1 0;
     padding: 0 15px;
 }
 
@@ -70,9 +69,7 @@
     /* margin-bottom: 10px; */
 }
 
-.myCardText {
-    height: 210px;
-}
+.myCardText {}
 
 .pub {
     font-weight: 200;
