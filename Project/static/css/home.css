@@ -100,6 +100,9 @@
 .myCardAuthor {
     font-weight: 500;
     flex: 1 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .myCardIcon {
