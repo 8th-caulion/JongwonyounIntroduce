@@ -22,6 +22,9 @@
         <div class="date">
             수정일 : {{detail.modified_date}}
         </div>
+        <div class="date">
+            조회수 : {{detail.view_count}}
+        </div>
     </div>
     <hr />
     <div class="detailBody">
@@ -29,6 +32,16 @@
             {{detail.text}}
         </div>
         <div class="detailCommentContainer">
+            <hr />
+            {% if detail.comments.all.count == 0 %}
+            <div class="commentCount">
+                작성된 댓글이 없습니다
+            </div>
+            {% else %}
+            <div class="commentCount">
+                {{detail.comments.all.count}}개의 댓글
+            </div>
+            {% endif %}
             {% for comment in detail.comments.all %}
             <hr />
             <div class="detailComment">
