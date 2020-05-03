@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Post
+from .models import Post, Comment
 from django.utils import  timezone
 # Create your views here.
 
@@ -45,3 +45,11 @@ def saveEditedPost(request, blog_id):
     post.modified_date = timezone.datetime.now()
     post.save()
     return redirect('/post/'+str(post.id))
+def writeNewComment(request, blog_id):
+    comment = Comment()
+    comment.author = request.GET['author']
+    comment.pub_date = timezone.datetime.now()
+    comment.post = get_object_or_404(Post, pk = blog_id)
+    comment.text = request.GET['text']
+    comment.save()
+    return redirect('/post/'+str(blog_id))

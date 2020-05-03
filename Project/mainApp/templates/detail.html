@@ -42,6 +42,16 @@
                 {{detail.comments.all.count}}개의 댓글
             </div>
             {% endif %}
+            <form action="{% url 'writeNewComment' detail.id %}" class="commentForm">
+                <div class="form-group row col-sm-2">
+                    <input type="text" class="form-control" placeholder="작성자" name="author">
+                </div>
+                <div class=" from-group mb-3">
+                    <textarea class="form-control" name="text" id="exampleFormControlTextarea1" rows="3"
+                        placeholder="댓글을 작성하세요">{{post.text}}</textarea>
+                </div>
+                <button type="submit" class="btn btn-dark">작성</button>
+            </form>
             {% for comment in detail.comments.all %}
             <hr />
             <div class="detailComment">
