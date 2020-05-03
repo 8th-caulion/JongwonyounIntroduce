@@ -13,7 +13,17 @@
 
             <div class="myCardBody">
                 <div class="myCardText">{{post.summary}}</div>
+            </div>
+            <div class="myCardFootersContainer">
                 <div class="pub">{{post.pub_date}}</div>
+                <div class="myCardFooter">
+                    <span class="myCardAuthorPre">by </span>
+                    <div class="myCardAuthor">{{post.author}}</div>
+                    <img class="myCardIcon" src="{% static 'icon/views.svg' %}" alt="">
+                    <div class="myCardCounter">{{post.view_count}}</div>
+                    <img class="myCardIcon" src="{% static 'icon/comments.svg' %}" alt="">
+                    <div class="myCardCounter">{{post.comments.all.count}}</div>
+                </div>
             </div>
         </div>
     </a>
