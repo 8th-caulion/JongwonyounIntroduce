@@ -1,0 +1,18 @@
+body {
+    background-color: #F2F3F6;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.btn-outline-dark:hover {
+    color: white;
+}
