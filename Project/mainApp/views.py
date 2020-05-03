@@ -33,3 +33,15 @@ def deletePost(request, blog_id):
     post = get_object_or_404(Post, pk = blog_id)
     post.delete()
     return redirect('main')
+
+def editPost(request, blog_id):
+    post = get_object_or_404(Post, pk = blog_id)
+    return render(request, 'edit.html', {'post' : post})
+
+def saveEditedPost(request, blog_id):
+    post = get_object_or_404(Post, pk = blog_id)
+    post.title = request.GET['title']
+    post.text = request.GET['text']
+    post.modified_date = timezone.datetime.now()
+    post.save()
+    return redirect('/post/'+str(post.id))
