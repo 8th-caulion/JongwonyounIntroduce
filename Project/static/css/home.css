@@ -12,6 +12,24 @@
     height: 100%;
 }
 
+@media (max-width: 1500px) {
+    .cardContainer {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 1250px) {
+    .cardContainer {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 900px) {
+    .cardContainer {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 .myCard {
     width: 250px;
     height: 300px;
