@@ -28,5 +28,6 @@ urlpatterns = [
     path('edit/<int:blog_id>', mainApp.views.editPost, name="edit"),
     path('profile/', profileApp.views.profile, name="profile"),
     path('writeComment/<int:blog_id>',mainApp.views.writeNewComment, name="writeNewComment"),
+    path('deleteComment/<int:comment_id>', mainApp.views.deleteComment, name="deleteComment"),
     path('editSave/<int:blog_id>', mainApp.views.saveEditedPost, name="saveEditedPost")
 ]

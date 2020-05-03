@@ -16,3 +16,7 @@ a:hover {
 .btn-outline-dark:hover {
     color: white;
 }
+
+.container {
+    margin-bottom: 100px;
+}

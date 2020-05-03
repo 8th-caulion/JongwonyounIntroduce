@@ -59,6 +59,9 @@
                     <div class="commentAuthor">
                         {{comment.author}}
                     </div>
+                    <a class="commentDeleteButton" href="{% url 'deleteComment' comment.id %}">
+                        삭제 &nbsp |
+                    </a>
                     <div class="commentPubDate">
                         {{comment.pub_date}}
                     </div>

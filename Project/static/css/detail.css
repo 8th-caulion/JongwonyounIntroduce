@@ -60,6 +60,7 @@
 .commentPubDate {
     font-weight: 100;
     font-size: 0.9rem;
+    margin-left: 5px;
 }
 
 .commentContent {
@@ -74,4 +75,10 @@
 
 .commentForm {
     margin: 10px 10px;
+}
+
+.commentDeleteButton {
+    margin-right: 5px;
+    font-weight: 100;
+    font-size: 0.9rem;
 }

@@ -53,3 +53,9 @@ def writeNewComment(request, blog_id):
     comment.text = request.GET['text']
     comment.save()
     return redirect('/post/'+str(blog_id))
+
+def deleteComment(request, comment_id):
+    comment = get_object_or_404(Comment, pk = comment_id)
+    post = comment.post
+    comment.delete()
+    return redirect('/post/'+str(post.id))
